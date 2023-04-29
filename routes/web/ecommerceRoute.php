@@ -14,6 +14,6 @@ Route::group(['prefix' => 'e-commerce/'], function () {
     Route::group(['prefix' => 'productos'], function () {
         Route::get('', [ProductoController::class, 'index'])->name('productos.index');
         Route::post('store', [ProductoController::class, 'store'])->name('productos.store');
-        Route::post('{producto}/show', [ProductoController::class, 'show'])->name('productos.show');
+        Route::post('{producto}/show', [ProductoController::class, 'show'])->name('productos.show'); 
     });
 });
