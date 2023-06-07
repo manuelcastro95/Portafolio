@@ -21,6 +21,7 @@ return new class extends Migration
             $table->unsignedBigInteger('categoria_id');
             $table->bigInteger('existencias');
             $table->bigInteger('estado');
+            $table->integer('valoracion')->default(0);
             $table->timestamps(); 
         });
     }

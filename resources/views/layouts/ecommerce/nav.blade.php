@@ -16,153 +16,19 @@
                             height="66" /></a></div>
             </div>
             <div class="rd-navbar-right rd-navbar-nav-wrap">
-                <div class="rd-navbar-aside">
-                    <ul class="rd-navbar-contacts-2">
-                        <li>
-                            <div class="unit unit-spacing-xs">
-                                <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                                <div class="unit-body"><a class="phone" href="tel:#">+1
-                                        718-999-3939</a></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="unit unit-spacing-xs">
-                                <div class="unit-left"><span class="icon mdi mdi-map-marker"></span>
-                                </div>
-                                <div class="unit-body"><a class="address" href="#">514 S.
-                                        Magnolia St. Orlando, FL 32806</a></div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="list-share-2">
-                        <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                        <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                        <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                        <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
-                    </ul>
-                </div>
+
                 <div class="rd-navbar-main">
                     <!-- RD Navbar Nav-->
                     <ul class="rd-navbar-nav">
-                        <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                        <li class="rd-nav-item {{$seleccionado == 'inicio' ? 'active' : ''}}"><a class="rd-nav-link" href="{{route('inicio')}}">Inicio</a>
                         </li>
-                        <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">About
-                                us</a>
+                        <li class="rd-nav-item {{$seleccionado == 'acerca' ? 'active' : ''}}"><a class="rd-nav-link" href="{{route('acerca.nosotros')}}">Acerca de Nosotros</a>
                         </li>
-                        <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Typography</a>
-                        </li>
-                        <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                        <li class="rd-nav-item {{$seleccionado == 'contacto' ? 'active' : ''}}"><a class="rd-nav-link" href="{{route('contactanos')}}">Contactanos</a>
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-open rd-navbar-fixed-element-1"
-                data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap"
-                data-multitoggle-isolate="data-multitoggle-isolate">
-                <div class="project-hamburger"><span class="project-hamburger-arrow"></span><span
-                        class="project-hamburger-arrow"></span><span class="project-hamburger-arrow"></span>
-                </div>
-            </div>
-            <div class="rd-navbar-project">
-                <div class="rd-navbar-project-header">
-                    <h5 class="rd-navbar-project-title">Gallery</h5>
-                    <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-close"
-                        data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap"
-                        data-multitoggle-isolate="data-multitoggle-isolate">
-                        <div class="project-close"><span></span><span></span></div>
-                    </div>
-                </div>
-                <div class="rd-navbar-project-content rd-navbar-content">
-                    <div>
-                        <div class="row gutters-20" data-lightgallery="group">
-                            <div class="col-6">
-                                <!-- Thumbnail Creative-->
-                                <article class="thumbnail thumbnail-creative"><a
-                                        href="{{ asset('admin/eccomerce/images/project-1-1200x800-original.jpg') }}"
-                                        data-lightgallery="item">
-                                        <div class="thumbnail-creative-figure"><img
-                                                src="{{ asset('admin/eccomerce/images/project-1-195x164.jpg') }}"
-                                                width="195" height="164" />
-                                        </div>
-                                        <div class="thumbnail-creative-caption"><span
-                                                class="icon thumbnail-creative-icon linearicons-magnifier"></span>
-                                        </div>
-                                    </a></article>
-                            </div>
-                            <div class="col-6">
-                                <!-- Thumbnail Creative-->
-                                <article class="thumbnail thumbnail-creative"><a
-                                        href="{{ asset('admin/eccomerce/images/project-2-1200x800-original.jpg') }}"
-                                        data-lightgallery="item">
-                                        <div class="thumbnail-creative-figure"><img
-                                                src="{{ asset('admin/eccomerce/images/project-2-195x164.jpg') }}"
-                                                alt="" width="195" height="164" />
-                                        </div>
-                                        <div class="thumbnail-creative-caption"><span
-                                                class="icon thumbnail-creative-icon linearicons-magnifier"></span>
-                                        </div>
-                                    </a></article>
-                            </div>
-                            <div class="col-6">
-                                <!-- Thumbnail Creative-->
-                                <article class="thumbnail thumbnail-creative"><a
-                                        href="{{ asset('admin/eccomerce/images/project-3-1200x800-original.jpg') }}"
-                                        data-lightgallery="item">
-                                        <div class="thumbnail-creative-figure"><img
-                                                src="{{ asset('admin/eccomerce/images/project-3-195x164.jpg') }}"
-                                                alt="" width="195" height="164" />
-                                        </div>
-                                        <div class="thumbnail-creative-caption"><span
-                                                class="icon thumbnail-creative-icon linearicons-magnifier"></span>
-                                        </div>
-                                    </a></article>
-                            </div>
-                            <div class="col-6">
-                                <!-- Thumbnail Creative-->
-                                <article class="thumbnail thumbnail-creative"><a
-                                        href="{{ asset('admin/eccomerce/images/project-4-1200x800-original.jpg') }}"
-                                        data-lightgallery="item">
-                                        <div class="thumbnail-creative-figure"><img
-                                                src="{{ asset('admin/eccomerce/images/project-4-195x164.jpg') }}"
-                                                alt="" width="195" height="164" />
-                                        </div>
-                                        <div class="thumbnail-creative-caption"><span
-                                                class="icon thumbnail-creative-icon linearicons-magnifier"></span>
-                                        </div>
-                                    </a></article>
-                            </div>
-                            <div class="col-6">
-                                <!-- Thumbnail Creative-->
-                                <article class="thumbnail thumbnail-creative"><a
-                                        href="{{ asset('admin/eccomerce/images/project-5-1200x800-original.jpg') }}"
-                                        data-lightgallery="item">
-                                        <div class="thumbnail-creative-figure"><img
-                                                src="{{ asset('admin/eccomerce/images/project-5-195x164.jpg') }}"
-                                                alt="" width="195" height="164" />
-                                        </div>
-                                        <div class="thumbnail-creative-caption"><span
-                                                class="icon thumbnail-creative-icon linearicons-magnifier"></span>
-                                        </div>
-                                    </a></article>
-                            </div>
-                            <div class="col-6">
-                                <!-- Thumbnail Creative-->
-                                <article class="thumbnail thumbnail-creative"><a
-                                        href="{{ asset('admin/eccomerce/images/project-6-1200x800-original.jpg') }}"
-                                        data-lightgallery="item">
-                                        <div class="thumbnail-creative-figure"><img
-                                                src="{{ asset('admin/eccomerce/images/project-6-195x164.jpg') }}"
-                                                alt="" width="195" height="164" />
-                                        </div>
-                                        <div class="thumbnail-creative-caption"><span
-                                                class="icon thumbnail-creative-icon linearicons-magnifier"></span>
-                                        </div>
-                                    </a></article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div>     
         </div>
     </div>
 </nav>

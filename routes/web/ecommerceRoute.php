@@ -7,7 +7,14 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'e-commerce/'], function () {
     Route::get('', function () {
         return view('ecommerce.index');
-    });
+    })->name('inicio');
+
+    Route::get('acerca-de-nosotros', function () {
+        return view('ecommerce.acerca_de_nosotros');
+    })->name('acerca.nosotros');
+    Route::get('contactanos', function () {
+        return view('ecommerce.contactanos');
+    })->name('contactanos');
 
 
     //Productos
