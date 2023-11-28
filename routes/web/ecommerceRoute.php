@@ -5,6 +5,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(['prefix' => 'e-commerce/'], function () {
+
+    Route::get('dashboard', function () {
+        return view('layouts.admin.app');
+    })->name('dashboard');
+
     Route::get('', function () {
         return view('ecommerce.index');
     })->name('inicio');
