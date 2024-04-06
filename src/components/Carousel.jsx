@@ -6,10 +6,10 @@ import "slick-carousel/slick/slick-theme.css";
 const Carousel = ({ imagenes }) => {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 600,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     autoplay: true,
     autoplaySpeed: 3000,
   };
@@ -21,7 +21,7 @@ const Carousel = ({ imagenes }) => {
           <img
             src={imagen.ruta}
             alt={`Slide ${index + 1}`}
-            className="mx-auto max-w-full h-44 rounded-xl"
+            className="mx-5 w-44 h-40 rounded-xl"
           />
         </div>
       ))}

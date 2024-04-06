@@ -8,33 +8,59 @@ import reactImg from "../assets/img/logos/react.png";
 import tailwindImg from "../assets/img/logos/tailwind.png";
 
 const Habilidades = () => {
+
+  const skills = [
+    {
+      title: "Bootstrap",
+      src: bootstrapImg
+    },
+    {
+      title: "CSS 3",
+      src: cssImg
+    },
+    {
+      title: "JavaScript",
+      src: jsImg
+    },
+    {
+      title: "Laravel",
+      src: laravelImg
+    },
+    {
+      title: "Mysql",
+      src: mysqlImg
+    },
+    {
+      title: "PHP",
+      src: phpImg
+    },
+    {
+      title: "React",
+      src: reactImg
+    },
+    {
+      title: "Tailwind",
+      src: tailwindImg
+    },
+  ];
+
   return (
     <>
-      <div className="col-span-3 w-full bg-green-50 h-44 rounded-xl mx-auto my-2 flex justify-center items-center gap-3">
-        <div className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 w-28 h-2w-28 border border-slate-300 p-2 rounded-full flex items-center justify-center cursor-pointer">
-          <img src={bootstrapImg} className="object-cover scale-75 rounded-2xl" alt="logo php" title="Bootstrap" />
-        </div>
-        <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-28 h-2w-28 border border-slate-300 p-2 rounded-full flex items-center justify-center cursor-pointer">
-          <img src={cssImg} className="object-cover scale-75 rounded-2xl" alt="logo php" title="CSS 3"/>
-        </div>
-        <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-28 h-2w-28 border border-slate-300 p-2 rounded-full flex items-center justify-center cursor-pointer">
-          <img src={jsImg} className="object-cover scale-75 rounded-2xl" alt="logo php"title="JavaScript" />
-        </div>
-        <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-28 h-2w-28 border border-slate-300 p-2 rounded-full flex items-center justify-center cursor-pointer">
-          <img src={laravelImg} className="object-cover scale-75 rounded-2xl" alt="logo php" title="Laravel"/>
-        </div>
-        <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-28 h-2w-28 border border-slate-300 p-2 rounded-full flex items-center justify-center cursor-pointer">
-          <img src={mysqlImg} className="object-cover scale-75 rounded-2xl" alt="logo php" title="Mysql"/>
-        </div>
-        <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-28 h-2w-28 border border-slate-300 p-2 rounded-full flex items-center justify-center cursor-pointer">
-          <img src={phpImg} className="object-cover scale-75 rounded-2xl" alt="logo php"title="PHP" />
-        </div>
-        <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-28 h-2w-28 border border-slate-300 p-2 rounded-full flex items-center justify-center cursor-pointer">
-          <img src={reactImg} className="object-cover scale-75 rounded-2xl" alt="logo php" title="React"/>
-        </div>
-        <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 w-28 h-2w-28 border border-slate-300 p-2 rounded-full flex items-center justify-center cursor-pointer">
-          <img src={tailwindImg} className="object-cover scale-75 rounded-2xl" alt="logo php" title="Tailwind"/>
-        </div>
+      <div
+        className="
+          bg-green-50 rounded-xl  my-2
+            col-span-2 w-full h-full gap-3
+            grid grid-cols-2 px-12 py-6
+            md:col-span-3  md:h-44 md:flex md:justify-center md:items-center md:mx-auto
+          "
+      >
+        {
+          skills.map((skill, index) =>
+            <div key={index} className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 w-28 h-2w-28 border border-slate-300 p-2 rounded-full flex items-center justify-center cursor-pointer">
+              <img src={skill.src} className="object-cover scale-75 rounded-2xl" alt={`logo ${skill.title}`} title={skill.title} />
+            </div>
+          )
+        }
       </div>
     </>
   );

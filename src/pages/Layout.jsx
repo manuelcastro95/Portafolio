@@ -8,10 +8,9 @@ import Contacto from "./Contacto";
 const Layout = () => {
     return (
         <>
-            <div className="container mx-auto">
+            <div className="container mx-auto ">
                 <Navbar />
                 <Inicio />
-                
                 <Proyectos />
                 <Contacto />
             </div>
