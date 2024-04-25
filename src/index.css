@@ -14,3 +14,10 @@
 .animate-scroll{
     animation: scroll 20s linear infinite;
 }
+
+@font-face {
+    font-family: nunito;
+    src: url('/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+}
+

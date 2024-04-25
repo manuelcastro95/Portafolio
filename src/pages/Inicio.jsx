@@ -12,14 +12,18 @@ const Inicio = () => {
         className="
           grid grid-cols-1 rounded-xl gap-1
           md:grid-cols-3  md:h-80  md:mx-auto md:p-1 md:mb-36
+          bg-dark
+            text-light-gray
           "
       >
 
         <div
           className="
-          bg-blue-200 rounded-xl
+          rounded-xl
             h-full w-screen mx-1 p-5
             md:col-span-2 md:h-full md:w-full md:h-45 md:p-3 md:flex md:items-center
+            text-light-gray
+            
           "
         >
           <div>
@@ -28,7 +32,7 @@ const Inicio = () => {
               md:hidden
             "
             >
-              <div className="mb-16 h-72 w-[320px] rounded-full hover:animate-bounce ">
+              <div className="mb-16 mx-auto h-72 w-[320px] rounded-full hover:animate-bounce ">
                 <img src={perfilImg} className="object-cover" alt="" />
               </div>
             </div>
@@ -53,7 +57,7 @@ const Inicio = () => {
             md:flex md:items-center md:justify-center
           "
         >
-          <div className="md:mt-14 md:h-72 md:w-72 rounded-full hover:animate-bounce ">
+          <div className="md:mt-5 md:h-72 md:w-72 rounded-full hover:animate-bounce z-50">
             <img src={perfilImg} className="object-cover" alt="" />
           </div>
         </div>

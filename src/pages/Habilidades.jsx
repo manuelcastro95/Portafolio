@@ -48,7 +48,9 @@ const Habilidades = () => {
     <>
       <div
         className="
-          bg-green-50 rounded-xl  my-2
+          bg-soft
+          text-dark 
+            rounded-xl  my-3
             col-span-2 w-full h-full gap-3
             grid grid-cols-2 px-12 py-6
             md:col-span-3  md:h-44 md:flex md:justify-center md:items-center md:mx-auto

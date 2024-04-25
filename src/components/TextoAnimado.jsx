@@ -21,7 +21,7 @@ const TextoAnimado = ({ text, delay }) => {
     return () => clearInterval(interval);
   }, [currentIndex, text, delay]);
 
-  return <span>{displayText}</span>;
+  return <span className='text-[1.5rem] md:text-[2rem]'>{displayText}</span>;
 };
 
 export default TextoAnimado;

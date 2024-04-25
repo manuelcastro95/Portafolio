@@ -5,13 +5,16 @@ export const proyectos = [
 		description:
 			'aplicación restaurante realizada en node js y react',
         imagenes: [
-            {id:1, ruta:'/imgs/blogpost3.avif'},
-            {id:2, ruta:'/imgs/blogpost4.avif'},
-            {id:3, ruta:'/imgs/blogpost4.avif'}
+            {id:1, ruta:'/imgs/restaurante-1.png'},
+            {id:2, ruta:'/imgs/restaurante-2.png'},
+            {id:3, ruta:'/imgs/restaurante-3.png'},
+            {id:4, ruta:'/imgs/restaurante-4.png'},
         ],
         tags: [
             'react','node js', 'express js', 'tailwind'
-        ]
+        ],
+        link: '',
+        github: 'https://github.com/manuelcastro95/restaurante'
         
 	},
     {
@@ -26,7 +29,9 @@ export const proyectos = [
         ],
         tags: [
             'tailwind','laravel','mysql','react'
-        ]
+        ],
+        link: '',
+        github: 'https://github.com/manuelcastro95/ModeloMatematicoPriorizacion'
 	},
     {
 		id: 2,
@@ -40,6 +45,8 @@ export const proyectos = [
         ],
         tags: [
             'laravel','mysql','bootstrap', 'javascript','css'
-        ]
+        ],
+        link: '',
+        github: 'https://github.com/manuelcastro95/control_asistencias'
 	}
 ]

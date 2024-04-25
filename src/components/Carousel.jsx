@@ -21,7 +21,7 @@ const Carousel = ({ imagenes }) => {
           <img
             src={imagen.ruta}
             alt={`Slide ${index + 1}`}
-            className="mx-5 w-44 h-40 rounded-xl"
+            className="mx-5 w-52 h-40 rounded-xl"
           />
         </div>
       ))}
