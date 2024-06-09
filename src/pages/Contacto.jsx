@@ -6,12 +6,8 @@ const Contacto = () => {
         md:grid-cols-3 md:gap-1 py-1 px-1 md:mb-4
       "
     >
-      <div 
-        className="
-          md:col-span-3 w-full mb-2 text-light-gray bg-dark rounded-xl h-10 border m-0 flex justify-center items-center
-        "
-      >
-        <span className="text-xl">CONTACTO</span>
+      <div className=" md:col-span-3 w-full mb-2 text-light-gray bg-dark rounded-lg h-10 border m-0 flex justify-center items-center ">
+        <span className='text-2xl md:text-2xl font-bold'>Contacto</span>
       </div>
       
       <div 

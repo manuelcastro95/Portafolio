@@ -8,61 +8,53 @@ import reactImg from "../assets/img/logos/react.png";
 import tailwindImg from "../assets/img/logos/tailwind.png";
 
 const Habilidades = () => {
-
   const skills = [
     {
       title: "Bootstrap",
-      src: bootstrapImg
-    },
-    {
-      title: "CSS 3",
-      src: cssImg
+      src: bootstrapImg,
     },
     {
       title: "JavaScript",
-      src: jsImg
+      src: jsImg,
     },
     {
       title: "Laravel",
-      src: laravelImg
+      src: laravelImg,
     },
     {
-      title: "Mysql",
-      src: mysqlImg
+      title: "MySQL",
+      src: mysqlImg,
     },
     {
       title: "PHP",
-      src: phpImg
+      src: phpImg,
     },
     {
       title: "React",
-      src: reactImg
+      src: reactImg,
     },
     {
       title: "Tailwind",
-      src: tailwindImg
+      src: tailwindImg,
     },
   ];
 
   return (
     <>
-      <div
-        className="
-          bg-soft
-          text-dark 
-            rounded-xl  my-3
-            col-span-2 w-full h-full gap-3
-            grid grid-cols-2 px-12 py-6
-            md:col-span-3  md:h-44 md:flex md:justify-center md:items-center md:mx-auto
-          "
-      >
-        {
-          skills.map((skill, index) =>
-            <div key={index} className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 w-28 h-2w-28 border border-slate-300 p-2 rounded-full flex items-center justify-center cursor-pointer">
-              <img src={skill.src} className="object-cover scale-75 rounded-2xl" alt={`logo ${skill.title}`} title={skill.title} />
-            </div>
-          )
-        }
+      <div id="habilidades" className="bg-light-gray text-dark rounded-2xl my-3 p-6 col-span-2 w-full h-full gap-4 grid grid-cols-2 md:col-span-3 md:grid-cols-4 lg:flex lg:flex-wrap lg:justify-center lg:items-center lg:mx-auto">
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 w-28 h-28 border border-dark p-2 rounded-full flex items-center justify-center cursor-pointer m-2 bg-soft"
+          >
+            <img
+              src={skill.src}
+              className="object-cover scale-75 rounded-2xl"
+              alt={`logo ${skill.title}`}
+              title={skill.title}
+            />
+          </div>
+        ))}
       </div>
     </>
   );
