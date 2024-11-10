@@ -9,29 +9,46 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-light-gray shadow-md fixed top-0 left-0 right-0 z-50 font-nunito">
-      <div className="container mx-auto flex items-center justify-between py-2 px-6">
+    <nav className="bg-white shadow-lg fixed top-0 left-0 right-0 z-50 font-nunito">
+      <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo */}
         <div className="flex items-center">
           <Link to="/" className="text-dark font-bold text-2xl">
-            <img className="w-12 h-auto rounded-full" src="/imgs/favicon.ico" alt="Logo" />
+            <img className="w-12 h-auto rounded-full hover:scale-110 transition-transform duration-300" 
+                 src="/imgs/favicon.ico" 
+                 alt="Logo" />
           </Link>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-6">
-          <a href="#inicio" className="text-dark hover:text-accent">Inicio</a>
-          <a href="#habilidades" className="text-dark hover:text-accent">Habilidades</a>
-          <a href="#experiencia" className="text-dark hover:text-accent">Experiencia</a>
-          <a href="#proyectos" className="text-dark hover:text-accent">Proyectos</a>
-          <a href="#contacto" className="text-dark hover:text-accent">Contacto</a>
+        <div className="hidden md:flex items-center space-x-8">
+          {['inicio', 'habilidades', 'experiencia', 'proyectos', 'contacto'].map((item) => (
+            <a
+              key={item}
+              href={`#${item}`}
+              className="
+                relative px-2 py-1
+                text-dark capitalize font-medium
+                transition-all duration-300
+                hover:text-primary
+                after:content-['']
+                after:absolute after:left-0 after:bottom-0
+                after:w-full after:h-0.5 after:bg-primary
+                after:transform after:scale-x-0
+                after:transition-transform after:duration-300
+                hover:after:scale-x-100
+              "
+            >
+              {item}
+            </a>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-dark focus:outline-none"
+            className="text-dark hover:text-primary transition-colors duration-300 focus:outline-none"
             aria-controls="mobile-menu"
             aria-expanded={isOpen}
           >
@@ -43,27 +60,33 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div id="mobile-menu" className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-light-gray shadow-md`}>
+      <div 
+        id="mobile-menu" 
+        className={`
+          ${isOpen ? 'block' : 'hidden'} 
+          md:hidden bg-white shadow-lg
+          transform transition-all duration-300
+        `}
+      >
         <ul className="flex flex-col items-center space-y-4 py-4">
-          <li>
-            <a href="#inicio" className="text-dark hover:text-accent block">Inicio</a>
-          </li>
-          <li>
-            <a href="#habilidades" className="text-dark hover:text-accent block">Habilidades</a>
-          </li>
-          <li>
-            <a href="#experiencia" className="text-dark hover:text-accent block">Experiencia</a>
-          </li>
-          <li>
-            <a href="#proyectos" className="text-dark hover:text-accent block">Proyectos</a>
-          </li>
-          <li>
-            <a href="#contacto" className="text-dark hover:text-accent block">Contacto</a>
-          </li>
+          {['inicio', 'habilidades', 'experiencia', 'proyectos', 'contacto'].map((item) => (
+            <li key={item}>
+              <a 
+                href={`#${item}`} 
+                className="
+                  text-dark capitalize font-medium
+                  hover:text-primary transition-colors duration-300
+                  block px-4 py-2
+                "
+              >
+                {item}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

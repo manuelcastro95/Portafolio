@@ -1,44 +1,105 @@
 const Contacto = () => {
   return (
-    <div id="contacto" 
-      className="
-        w-full h-auto rounded-xl mx-auto grid grid-cols-1
-        md:grid-cols-3 md:gap-1 py-1 px-1 md:mb-4
-      "
-    >
-      <div className=" md:col-span-3 w-full mb-2 text-light-gray bg-dark rounded-lg h-10 border m-0 flex justify-center items-center ">
-        <span className='text-2xl md:text-2xl font-bold'>Contacto</span>
+    <div id="contacto" className="container mx-auto px-4">
+      {/* Encabezado */}
+      <div className="mb-12 text-center">
+        <h2 className="text-4xl font-bold text-dark mb-4">
+          Contacto
+          <span className="block h-1 w-20 bg-primary mx-auto mt-4 rounded-full"></span>
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          ¿Interesado en trabajar juntos? ¡Contáctame!
+        </p>
       </div>
-      
-      <div 
-        className="
-          bg-warm w-[390px] mx-auto rounded-xl col-span-3 grid grid-col-1 gap-3 p-2  md:p-3  md:w-full md:grid-cols-3 md:gap-1 
-        "
-      >
-        <a href="mailto:manuelcastro911@gmail.com" className="text-xl hover:text-light-gray  " title="correo electronico">
-          <i className="fa-regular fa-envelope mr-2"></i>
-          <span>Manuelcastro911@gmail.com</span>
+
+      {/* Grid de contactos */}
+      <div className="
+        max-w-6xl mx-auto 
+        grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
+        gap-4 sm:gap-6 lg:gap-8
+        bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-lg
+      ">
+        <a 
+          href="mailto:manuelcastro911@gmail.com" 
+          className="
+            flex items-center gap-4 p-6 rounded-lg
+            transition-all duration-300
+            hover:bg-primary/5 hover:scale-105
+            min-h-[100px]
+          "
+        >
+          <div className="flex-shrink-0">
+            <i className="fa-regular fa-envelope text-3xl text-primary"></i>
+          </div>
+          <div className="flex-grow min-w-0">
+            <p className="text-sm text-gray-600 mb-1">Email</p>
+            <p className="text-dark font-medium truncate">manuelcastro911@gmail.com</p>
+          </div>
         </a>
-        <a href="https://www.linkedin.com/in/manuel-castro-minotta/" target="_blank" className="text-xl hover:text-light-gray  " title="linkedin">
-          <i className="fa fa-linkedin mr-2" aria-hidden="true"></i>
-          <span>manuel-castro-minotta</span>
+
+        <a 
+          href="https://www.linkedin.com/in/manuel-castro-minotta/" 
+          target="_blank"
+          className="
+            flex items-center gap-4 p-6 rounded-lg
+            transition-all duration-300
+            hover:bg-primary/5 hover:scale-105
+            min-h-[100px]
+          "
+        >
+          <div className="flex-shrink-0">
+            <i className="fa fa-linkedin text-3xl text-primary"></i>
+          </div>
+          <div className="flex-grow min-w-0">
+            <p className="text-sm text-gray-600 mb-1">LinkedIn</p>
+            <p className="text-dark font-medium truncate">manuel-castro-minotta</p>
+          </div>
         </a>
-        <a href="https://github.com/manuelcastro95" target="_blank" className="text-xl hover:text-light-gray  " title="github">
-          <i className="fa fa-github mr-2" aria-hidden="true"></i>
-          <span>manuelcastro95</span>
+
+        <a 
+          href="https://github.com/manuelcastro95" 
+          target="_blank"
+          className="
+            flex items-center gap-4 p-6 rounded-lg
+            transition-all duration-300
+            hover:bg-primary/5 hover:scale-105
+            min-h-[100px]
+          "
+        >
+          <div className="flex-shrink-0">
+            <i className="fa fa-github text-3xl text-primary"></i>
+          </div>
+          <div className="flex-grow min-w-0">
+            <p className="text-sm text-gray-600 mb-1">GitHub</p>
+            <p className="text-dark font-medium truncate">manuelcastro95</p>
+          </div>
         </a>
-        <a href="#" className="text-xl hover:text-light-gray  ">
-          <i className="fa fa-whatsapp mr-2" aria-hidden="true"></i>
-          +57 317 250 1811
+
+        <a 
+          href="#" 
+          className="
+            flex items-center gap-4 p-6 rounded-lg
+            transition-all duration-300
+            hover:bg-primary/5 hover:scale-105
+            min-h-[100px]
+          "
+        >
+          <div className="flex-shrink-0">
+            <i className="fa fa-whatsapp text-3xl text-primary"></i>
+          </div>
+          <div className="flex-grow min-w-0">
+            <p className="text-sm text-gray-600 mb-1">WhatsApp</p>
+            <p className="text-dark font-medium truncate">+57 317 250 1811</p>
+          </div>
         </a>
       </div>
-      <div className="col-span-3 w-[390px] mb-6 md:mb-0 md:w-full rounded-xl h-10 m-0 flex justify-center items-center mt-6 md:mt-2">
-        <a href="https://manuel-castro.dev/" className="cursor-pointer text-center text-dark">
-          © 2024 Manuel Castro. Todos los derechos reservados. 
-        </a>
+
+      {/* Footer */}
+      <div className="text-center mt-12 text-gray-600">
+        <p>© 2024 Manuel Castro. Todos los derechos reservados.</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Contacto;

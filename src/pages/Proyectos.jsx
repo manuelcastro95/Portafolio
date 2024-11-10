@@ -5,51 +5,88 @@ import { proyectos } from '../data/proyectos';
 const Proyectos = () => {
   const carouselProyectos = [...proyectos];
 
-  // Función para truncar la descripción del proyecto
-  function truncate(text, maxLength) {
-    if (text.length > maxLength) {
-      return text.substring(0, maxLength) + '...';
-    } else {
-      return text;
-    }
-  }
-
   return (
-    <div id="proyectos" className="rounded-xl mx-auto p-4 mb-8 mt-1 md:mt-1 md:w-full">
-      <div className="text-light-gray bg-dark w-full py-4 flex justify-center items-center rounded-lg md:h-10 md:border md:m-0">
-        <span className='text-2xl font-bold'>Proyectos</span>
+    <div id="proyectos" className="container mx-auto px-4">
+      {/* Encabezado de sección */}
+      <div className="mb-12 text-center">
+        <h2 className="text-4xl font-bold text-dark mb-4">
+          Proyectos
+          <span className="block h-1 w-20 bg-primary mx-auto mt-4 rounded-full"></span>
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Explora algunos de mis proyectos más destacados
+        </p>
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-4 gap-5 mt-6'>
+      {/* Grid de proyectos */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {carouselProyectos.map((proyecto, index) => (
-          <div key={index} className='border rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer'>
-            <div className="h-16 bg-dark flex justify-center items-center rounded-t-lg">
-              <span className='text-lg text-light-gray font-semibold'>{proyecto.title}</span>
-            </div>
-
-            <div className="bg-light-gray rounded-b-lg">
+          <div 
+            key={index} 
+            className="
+              group bg-white rounded-xl overflow-hidden
+              transform transition-all duration-300
+              hover:-translate-y-2 hover:shadow-2xl
+              border border-gray-100
+            "
+          >
+            {/* Imagen del proyecto */}
+            <div className="relative h-40 sm:h-48 lg:h-56 overflow-hidden">
               <Carousel imagenes={proyecto.imagenes} />
+              <div className="
+                absolute inset-0 bg-gradient-to-t from-black/80 to-transparent
+                opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                flex items-end p-6
+              ">
+                <p className="text-white text-sm">{proyecto.description}</p>
+              </div>
             </div>
 
-            <div className="p-4">
-              <p className="text-left text-dark" title={proyecto.description}>
-                {truncate(proyecto.description, 80)}
-              </p>
-            </div>
-
-            <div className="flex justify-between items-center p-4">
-              <div>
+            {/* Contenido del proyecto */}
+            <div className="p-4 sm:p-6">
+              <h3 className="text-xl font-bold text-dark mb-3">{proyecto.title}</h3>
+              
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mb-4">
                 {proyecto.tags.map(tag => (
-                  <span key={tag} className="inline-block bg-accent text-light-gray rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">{tag}</span>
+                  <span key={tag} className="
+                    px-3 py-1 text-xs font-medium
+                    bg-primary/10 text-primary
+                    rounded-full
+                  ">
+                    {tag}
+                  </span>
                 ))}
               </div>
-              <div>
-                <a title='Ver demo proyecto' href={proyecto.link} className="text-accent hover:text-dark pr-3">
-                  <i className="fas fa-globe"></i>
-                </a>
-                <a title='Ver GitHub' href={proyecto.github} className="text-accent hover:text-dark">
-                  <i className="fab fa-github"></i>
-                </a>
+
+              {/* Enlaces */}
+              <div className="flex justify-end space-x-4 pt-4 border-t border-gray-100">
+                {proyecto.link && (
+                  <a 
+                    href={proyecto.link}
+                    className="
+                      text-accent hover:text-primary
+                      transition-colors duration-300
+                      flex items-center gap-2
+                    "
+                  >
+                    <i className="fas fa-globe text-lg"></i>
+                    <span className="text-sm">Demo</span>
+                  </a>
+                )}
+                {proyecto.github && (
+                  <a 
+                    href={proyecto.github}
+                    className="
+                      text-accent hover:text-primary
+                      transition-colors duration-300
+                      flex items-center gap-2
+                    "
+                  >
+                    <i className="fab fa-github text-lg"></i>
+                    <span className="text-sm">Código</span>
+                  </a>
+                )}
               </div>
             </div>
           </div>

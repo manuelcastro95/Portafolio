@@ -4,11 +4,21 @@ import ExperienciaItem from '../components/ExperienciaItem';
 
 
 const Experiencia = () => {
-    return (
-      <div id="experiencia" className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 md:p-6">
-        <div className="text-light-gray bg-dark w-full mt-2 py-1 flex justify-center items-center rounded-lg col-span-1 md:col-span-2">
-          <span className='text-2xl md:text-2xl font-bold'>Experiencia</span>
-        </div>
+  return (
+    <div id="experiencia" className="container mx-auto px-4">
+      {/* Encabezado */}
+      <div className="mb-12 text-center">
+        <h2 className="text-4xl font-bold text-dark mb-4">
+          Experiencia
+          <span className="block h-1 w-20 bg-primary mx-auto mt-4 rounded-full"></span>
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Mi trayectoria profesional en desarrollo de software
+        </p>
+      </div>
+
+      {/* Grid de experiencia */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
         <ExperienciaItem
           cargo="Técnico programación de software"
           empresa="Partes Equipos y Suministros"
@@ -22,6 +32,7 @@ const Experiencia = () => {
             "Realización de API Rest.",
             "Actualización Interfaz de usuario (Diseño Responsive), de acuerdo al diseño establecido."
           ]}
+          className="p-4 sm:p-6 lg:p-8"
         />
         <ExperienciaItem
           cargo="Técnico programación de software"
@@ -34,9 +45,11 @@ const Experiencia = () => {
             "Realización de API Rest.",
             "Testeo de aplicaciones móviles y web."
           ]}
+          className="p-4 sm:p-6 lg:p-8"
         />
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 export default Experiencia;
