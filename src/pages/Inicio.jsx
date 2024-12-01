@@ -3,7 +3,7 @@ import EscritorSecuencial from "../components/EscritorSecuencial";
 import TextoAnimado from "../components/TextoAnimado";
 
 const Inicio = () => {
-  const words = ["web", "front-end", "back-end", "diseño"];
+  const words = ["web", "front-end", "back-end"];
   return (
     <div
       id="inicio"
@@ -33,10 +33,12 @@ const Inicio = () => {
           </span>
 
           <p className="my-4 sm:my-6 text-base sm:text-lg lg:text-xl text-left max-w-3xl">
-            Apasionado desarrollador con más de 3 años de experiencia en el desarrollo de aplicaciones web. 
-            Me especializo en la creación de soluciones tecnológicas eficientes y escalables, 
-            utilizando las mejores prácticas y tecnologías modernas. Mi enfoque se centra en 
-            crear experiencias de usuario excepcionales mientras mantengo un código limpio y mantenible.
+          Desarrollador FullStack con más de 3 años de experiencia especializado en el diseño e implementación 
+          de soluciones web empresariales. Destaco por mi capacidad para crear aplicaciones robustas y escalables, 
+          con un fuerte enfoque en la arquitectura limpia y las mejores prácticas de desarrollo. 
+          He participado en proyectos significativos como la implementación de sistemas de Cuentas por Pagar 
+          y la modernización de interfaces de usuario.
+
           </p>
         </div>
       </div>

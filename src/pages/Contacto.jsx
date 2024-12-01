@@ -33,7 +33,7 @@ const Contacto = () => {
           </div>
           <div className="flex-grow min-w-0">
             <p className="text-sm text-gray-600 mb-1">Email</p>
-            <p className="text-dark font-medium truncate">manuelcastro911@gmail.com</p>
+            <p className="text-dark font-medium truncate" title="manuelcastro911@gmail.com">manuelcastro911@gmail.com</p>
           </div>
         </a>
 
@@ -52,7 +52,7 @@ const Contacto = () => {
           </div>
           <div className="flex-grow min-w-0">
             <p className="text-sm text-gray-600 mb-1">LinkedIn</p>
-            <p className="text-dark font-medium truncate">manuel-castro-minotta</p>
+            <p className="text-dark font-medium truncate" title="manuel-castro-minotta">manuel-castro-minotta</p>
           </div>
         </a>
 
@@ -71,7 +71,7 @@ const Contacto = () => {
           </div>
           <div className="flex-grow min-w-0">
             <p className="text-sm text-gray-600 mb-1">GitHub</p>
-            <p className="text-dark font-medium truncate">manuelcastro95</p>
+            <p className="text-dark font-medium truncate" title="manuelcastro95">manuelcastro95</p>
           </div>
         </a>
 
@@ -89,7 +89,7 @@ const Contacto = () => {
           </div>
           <div className="flex-grow min-w-0">
             <p className="text-sm text-gray-600 mb-1">WhatsApp</p>
-            <p className="text-dark font-medium truncate">+57 317 250 1811</p>
+            <p className="text-dark font-medium truncate" title="+57 317 250 1811">+57 317 250 1811</p>
           </div>
         </a>
       </div>

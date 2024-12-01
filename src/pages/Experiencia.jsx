@@ -22,28 +22,28 @@ const Experiencia = () => {
         <ExperienciaItem
           cargo="Técnico programación de software"
           empresa="Partes Equipos y Suministros"
-          duracion="ago. 2021 - actualidad · 2 años 11 meses"
+          duracion="2 años 11 meses"
           ubicacion=""
           responsabilidades={[
-            "Desarrollo de módulo Gestor de cuentas por pagar.",
-            "Realización de pruebas de aplicativo web y móvil.",
-            "Diseño de tablas y actualización de tablas MYSQL.",
-            "Maquetación de interfaces de usuario de acuerdo al diseño establecido.",
-            "Realización de API Rest.",
-            "Actualización Interfaz de usuario (Diseño Responsive), de acuerdo al diseño establecido."
+            "Diseño e implementación del módulo de Cuentas por Pagar, incluyendo flujos de aprobación, integración con contabilidad y reportería",
+            "Rediseño interfaces existentes aplicando principios de diseño responsive",
+            "Desarrollo de API Rest para integración con otros sistemas",
+            "Aplicación de principios SOLID y Clean Architecture",
+            "Diseño de tablas para la base de datos",
+            "Corrección de errores y mejoras de usabilidad"
           ]}
           className="p-4 sm:p-6 lg:p-8"
         />
         <ExperienciaItem
-          cargo="Técnico programación de software"
+          cargo="Técnico programación de software (Aprendiz)"
           empresa="Fergon Outsourcing SAS"
-          duracion="feb. 2021 - ago. 2021 · 7 meses"
+          duracion="7 meses"
           ubicacion=""
           responsabilidades={[
-            "Diseño de tablas y actualización de tablas MYSQL.",
+            "Actualización de interfaz de usuario plataforma web Kaidoc",
             "Maquetación de interfaces de usuario de acuerdo al diseño establecido.",
             "Realización de API Rest.",
-            "Testeo de aplicaciones móviles y web."
+            "Corrección de errores y mejoras de usabilidad"
           ]}
           className="p-4 sm:p-6 lg:p-8"
         />

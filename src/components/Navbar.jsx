@@ -42,6 +42,17 @@ const Navbar = () => {
               {item}
             </a>
           ))}
+          <a
+            href="/cv-manuel-castro-minotta.pdf"
+            download
+            className="
+              bg-primary text-white px-4 py-2 rounded-full
+              hover:bg-primary/80 transition-colors duration-300
+              font-medium
+            "
+          >
+            Descargar CV
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -83,6 +94,19 @@ const Navbar = () => {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href="/cv.pdf"
+              download
+              className="
+                bg-primary text-white px-4 py-2 rounded-full
+                hover:bg-primary/80 transition-colors duration-300
+                font-medium
+              "
+            >
+              Descargar CV
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

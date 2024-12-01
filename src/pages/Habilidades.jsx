@@ -6,16 +6,16 @@ import mysqlImg from "../assets/img/logos/mysql.png";
 import phpImg from "../assets/img/logos/php.png";
 import reactImg from "../assets/img/logos/react.png";
 import tailwindImg from "../assets/img/logos/tailwind.png";
-
+import gitImg from "../assets/img/logos/git.png";
 const Habilidades = () => {
   const skills = [
-    { title: "Bootstrap", src: bootstrapImg },
-    { title: "JavaScript", src: jsImg },
     { title: "Laravel", src: laravelImg },
-    { title: "MySQL", src: mysqlImg },
     { title: "PHP", src: phpImg },
+    { title: "MySQL", src: mysqlImg },
     { title: "React", src: reactImg },
+    { title: "Bootstrap", src: bootstrapImg },
     { title: "Tailwind", src: tailwindImg },
+    { title: "Git", src: gitImg },
   ];
 
   return (
