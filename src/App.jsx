@@ -6,7 +6,7 @@ import Layout from "./pages/Layout"
 import Habilidades from "./pages/Habilidades"
 import Proyectos from "./pages/Proyectos"
 import Contacto from "./pages/Contacto"
-
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
 
